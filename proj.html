@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../Bootstrap/css/all.min.css">
+   <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../Bootstrap/fontawesome-free-6.4.2-web/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+   <title>Document</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         font-family: 'Inter', sans-serif;
+         font-family: 'Nunito', sans-serif;
+      }
+      body{
+         background-color: #eee;
+         overflow-x: hidden;
+         height: 3600px;
+         position: relative;
+      }
+      .navbar{
+         height: 70px;
+         border-radius: 5px;
+         position: sticky;
+         top: 0px;
+         margin: 4px auto;
+         z-index: 9999999;
+      }
+      .btn-outline-warning:hover{
+         box-shadow: 0px 0px 4px #ffc15d;
+      }
+      .Home{
+         font-weight: 900;
+      }
+      .imges{
+         width: 100%;
+         height: 100%;
+      }
+      .con1{
+         height: 450px;
+         background-image: url("../img/wallpaperflare.com_wallpaper (2).jpg");
+         background-size: cover;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .endiv{
+      margin-top: 100px;
+      }
+      .endiv div {
+         width: 150px;
+         height: 150px;
+         background-color: #5555;
+         border-radius: 50%;
+         position: relative;
+   box-shadow: 0px 2px 5px #000;
+
+      }
+      .endiv div::after{
+         font-size: 25px;
+         font-weight: bold;
+         letter-spacing: 1px;
+      }
+      .endiv .div1::after{
+         content: 'Client';
+         position: absolute;
+         bottom: -50px;
+         left: 40px;
+      }
+      .endiv .div2::after{
+         content: 'A trip';
+         position: absolute;
+         bottom: -50px;
+         left: 40px;
+      }
+      .endiv .div3::after{
+         content: 'Eployee';
+         position: absolute;
+         bottom: -50px;
+         left: 30px;
+      }
+      .endiv .div4::after{
+         content: 'Service';
+         position: absolute;
+         bottom: -50px;
+         left: 40px;
+      }
+      .endiv .div1, .div2,.div3,.div4{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+.form1{
+   position: absolute;
+   left: 25%;
+   bottom: 3%;
+}
+.form1 input{
+   height: 150px;
+   margin: auto;
+}
+.btn-success{
+   position:absolute ;
+   bottom: 0;
+   right: 0;
+}
+.card{
+   box-shadow: 0px 0px 4px #000;
+}
+.coins{
+   box-shadow: 0px 3px 4px #000;
+
+}
+      </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+            <img src="../img/Sun Solar Energy Logo Design Template.  Green energy logos.png"  alt="Logo" width="50" height="44" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#">Prince Trek</a>
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link active Home text-primary" aria-current="page" href="./proj.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Trips</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                     More
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#">News</a></li>
+                     <li><a class="dropdown-item" href="coins.html">Currency exchange</a></li>
+                     <li><hr class="dropdown-divider"></li>
+                     <li><a class="dropdown-item connect" href="./login.html">Connect with us</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <form class="d-flex" role="search">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-warning text-dark" type="submit">Search</button>
+            </form>
+         </div>
+      </div>
+   </nav>
+   <div class="container-fluid con1">
+     <div class="jumbotron">
+       <h1 class="display-4"></h1>
+       <p class="lead"></p>
+       <hr class="my-4">
+       <p class="pend"></p>
+       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+    <div class="container-fluid mt-5" style="text-transform: capitalize;">
+      <h1 class="text-center">Our featured employees this month</h1>
+    </div>
+    <div class="container-fluid w-100 mt-5 d-flex justify-content-around">
+      <div class="card" style="width: 15rem;">
+        <img src="../img/pepole/people1.jpg" class="card-img-top" alt="..." style="height: 250px ;">
+        <div class="card-body">
+          <h5 class="card-title">Mohamed Ali</h5>
+          <p class="card-text">Our distinguished employee since 2015 until now. We wish you success always. Thank you very much</p>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img src="../img/pepole/people2.jpg" class="card-img-top" alt="..." style="height: 250px ;">
+        <div class="card-body">
+          <h5 class="card-title">Karim Abdelbaset</h5>
+          <p class="card-text">Our distinguished employee since 2015 until now. We wish you success always. Thank you very much</p>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid w-100 mt-5 d-flex justify-content-around">
+      <div class="card" style="width: 15rem;">
+        <img src="../img/pepole/people3.jpg" class="card-img-top" alt="..." style="height: 250px ;">
+        <div class="card-body">
+          <h5 class="card-title">Hossam Younis</h5>
+          <p class="card-text">Our distinguished employee since 2015 until now. We wish you success always. Thank you very much</p>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img src="../img/pepole/people4.jpg" class="card-img-top" alt="..." style="height: 250px ;">
+        <div class="card-body">
+          <h5 class="card-title">Mohamed Hanafi</h5>
+          <p class="card-text">Our distinguished employee since 2015 until now. We wish you success always. Thank you very much</p>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5"></div>
+    <div class="container-fluid text-center">
+      <h1>Currency Exchange Rates</h1>
+      <table class="table table-striped mt-5">
+         <thead>
+            <tr>
+               <th>Currency</th>
+               <th>Country</th>
+               <th>Exchange Rate (EGP)</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>US Dollar</td>
+               <td>United States</td>
+               <td>15.75</td>
+            </tr>
+            <tr>
+               <td>Euro</td>
+               <td>European Union</td>
+               <td>18.50</td>
+            </tr>
+            <tr>
+               <td>British Pound</td>
+               <td>United Kingdom</td>
+               <td>20.80</td>
+            </tr>
+            <tr>
+               <td>Japanese Yen</td>
+               <td>Japan</td>
+               <td>0.143</td>
+            </tr>
+            <tr>
+               <td>Canadian Dollar</td>
+               <td>Canada</td>
+               <td>12.25</td>
+            </tr>
+            <tr>
+               <td>Australian Dollar</td>
+               <td>Australia</td>
+               <td>11.50</td>
+            </tr>
+            <tr>
+               <td>Swiss Franc</td>
+               <td>Switzerland</td>
+               <td>17.25</td>
+            </tr>
+            <tr>
+               <td>Chinese Yuan</td>
+               <td>China</td>
+               <td>2.25</td>
+            </tr>
+            <tr>
+               <td>Indian Rupee</td>
+               <td>India</td>
+               <td>0.20</td>
+            </tr>
+            <tr>
+               <td>Brazilian Real</td>
+               <td>Brazil</td>
+               <td>3.50</td>
+            </tr>
+            <tr>
+               <td>Saudi Riyal</td>
+               <td>Saudi Arabia</td>
+               <td>4.20</td>
+            </tr>
+            <tr>
+               <td>Emirati Dirham</td>
+               <td>United Arab Emirates</td>
+               <td>4.30</td>
+            </tr>
+            <tr>
+               <td>Russian Ruble</td>
+               <td>Russia</td>
+               <td>0.21</td>
+            </tr>
+            <tr>
+               <td>Mexican Peso</td>
+               <td>Mexico</td>
+               <td>0.75</td>
+            </tr>
+            <tr>
+               <td>South African Rand</td>
+               <td>South Africa</td>
+               <td>0.90</td>
+            </tr>
+         </tbody>
+      </table>
+      <a href="./coins.html" class="btn coins btn-primary">Change your currency now  </a>
+      <!-- <i class="fa-solid fa-arrow-right"></i> -->
+   </div>
+   <div class="mt-5"></div>
+   <div class="container-fluid w-75 mt-4">
+      <div id="carouselExampleCaptions" class="carousel slide">
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+             <img src="../img/Plan/boing1jpg.jpg" style="width: 400px;height: 400px;" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5 style="color: #eee;">Boeing 747</h5>
+               <li style="font-size: 12px; color: #eee;">Description: The Boeing 747, also known as the "Jumbo Jet," is one of the most famous and widely used tourist transport aircraft in the world.</li>
+            <li style="font-size: 12px; color: #eee;">Specifications: It can accommodate approximately 400 to 600 passengers and is known for its long range and high transport capacity.</li>
+            <li style="font-size: 12px; color: #eee;">Usage: It is used by many airlines around the world for long-haul passenger flights.</li> 
+            </div>
+           </div>
+           <div class="carousel-item">
+             <img src="../img/Plan/boeing-747-750x430.jpg" style="width: 400px;height: 400px;" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5 style="color: #eee;">Boeing 777</h5>
+               <li style="font-size: 12px; color: #eee;">Description: The Boeing 777 is a twin-engine aircraft known for its powerful performance and passenger comfort.</li>
+               <li style="font-size: 12px; color: #eee;">Specifications: It can accommodate approximately 300 to 440 passengers and offers long-range capabilities.</li>
+               <li style="font-size: 12px; color: #eee;">Usage: It is used by many airlines for transoceanic and international long-haul flights.</li>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="../img/Plan/153805.jpg" style="width: 400px;height: 400px;" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5 style="color: #eee;">Airbus A380</h5>
+<li style="font-size: 12px; color: #eee;">Description: The Airbus A380 is the largest passenger aircraft in the world, renowned for its unique design and luxurious amenities for travelers.</li>
+<li style="font-size: 12px; color: #eee;">Specifications: It can accommodate around 500 to 850 passengers, featuring a double-deck layout, spaciousness, and high-tech facilities.</li>
+<li style="font-size: 12px; color: #eee;">Usage: It is utilized by major airlines to cater to the demand for long-haul air travel.</li>
+            </div>
+           </div>
+           <div class="carousel-item">
+             <img src="../img/Plan/Turkish_Airlines,_Airbus_A330-3380.jpg" style="width: 400px;height: 400px;" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5 style="color: #eee;">Boeing 787 Dreamliner</h5>
+               <li style="color: #eee; font-size: 12px;">Description: The Boeing 787 Dreamliner is a modern and advanced aircraft that offers exceptional comfort and performance for passengers.</li>
+               <li style="color: #eee; font-size: 12px;">Specifications: It can accommodate approximately 200 to 300 passengers, is lightweight, and employs cutting-edge technology to enhance fuel efficiency.</li>
+               <li style="color: #eee; font-size: 12px;">Usage: It is used by various airlines for both long-haul and medium-haul flights.</li>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="../img/Plan/1691008218_image.jpg" style="width: 400px;height: 400px;" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5 style="color: #eee;">Airbus A330</h5>
+<li style="font-size: 12px; color: #eee;">Description: The Airbus A330 is a versatile aircraft utilized for long-haul and medium-haul flights.</li>
+<li style="font-size: 12px; color: #eee;">Specifications: It can accommodate around 250 to 400 passengers, boasts fuel efficiency and long-range capabilities.</li>
+<li style="font-size: 12px; color: #eee;">Usage: It is employed by numerous airlines for transoceanic and international long-haul flights.</li>
+            </div>
+           </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+   </div>
+   <div class="container-fluid endiv d-flex justify-content-around">
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+      <div class="div4"></div>
+   </div>
+   <div class="container-fluid">
+      <div class="rating">
+         <input type="radio" id="star-1" name="star-radio" value="star-1">
+         <label for="star-1">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+         </label>
+         <input type="radio" id="star-2" name="star-radio" value="star-1">
+         <label for="star-2">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+         </label>
+         <input type="radio" id="star-3" name="star-radio" value="star-1">
+         <label for="star-3">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+         </label>
+         <input type="radio" id="star-4" name="star-radio" value="star-1">
+         <label for="star-4">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+         </label>
+         <input type="radio" id="star-5" name="star-radio" value="star-1">
+         <label for="star-5">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+         </label>
+       </div>
+   </div>
+   <div class="container-fluid w-50  mt-5 form-group form1 ">
+   <input type="text" class="form-control w-50" placeholder="Your opinion matters">
+   <div class="btn btn-success">Send</div>
+</div>
+   <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="../Bootstrap/fontawesome-free-6.4.2-web/js/all.min.js"></script>
+   <script src="./proj.js"></script>
+</body>
+</html>

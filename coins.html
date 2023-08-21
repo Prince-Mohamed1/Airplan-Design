@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Bootstrap/css/all.min.css">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Bootstrap/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Inter:wght@600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Nunito', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #e7f5ffd8;
+    position: relative;
+}
+.Currency{
+    font-weight: bold;
+}
+.search{
+transition: 0.3s;
+}
+.search:hover{
+ box-shadow: 0px 0px 4px #0dcaf0 ;
+}
+.sel1{
+   position: relative;
+}
+.transformation{
+   position: absolute;
+   bottom: 40px;
+   left: 45%;
+   text-transform: capitalize;
+}
+::placeholder{
+   text-transform: capitalize;
+}
+.imges{
+   position: absolute;
+   width: 300px;
+   top: 30%;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+              <img src="../img/Sun Solar Energy Logo Design Template.  Green energy logos.png"  alt="Logo" width="50" height="44" class="d-inline-block align-text-top">
+              <a class="navbar-brand" href="#">Prince Trek</a>
+           </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 <li class="nav-item">
+                    <a class="nav-link active Home" aria-current="page" href="./proj.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Trips</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                       More
+                    </a>
+                    <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="#">News</a></li>
+                       <li><a class="dropdown-item text-primary Currency " href="./coins.html">Currency exchange</a></li>
+                       <li><hr class="dropdown-divider"></li>
+                       <li><a class="dropdown-item connect" href="./login.html">Connect with us</a></li>
+                    </ul>
+                 </li>
+              </ul>
+              <form class="d-flex" role="search">
+                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-info search text-dark" type="submit">Search</button>
+              </form>
+           </div>
+        </div>
+     </nav>
+     <div class="container-fluid w-75 form-group mt-5">
+      <form class="form-group form">
+        <select class="form-select w-75 m-auto sel1" aria-label="Default select example">
+            <option selected>Choose The Currency From</option>
+            <option value= 30.82 >United States</option>
+            <option value=33.5>European Union</option>
+            <option value=39.25>United Kingdom</option>
+            <option value=0.21>Japan</option>
+            <option value=22.71>Canada</option>
+            <option value=19.65>Australia</option>
+            <option value=34.94>Switzerland</option>
+            <option value=4.23>China</option>
+            <option value="">Pound</option>
+            <option value=6.20>Brazil</option>
+            <option value=8.22>Saudi Arabia</option>
+            <option value=8.39>United Arab Emirates</option>
+            <option value=0.33>Russia</option>
+            <option value=1.81>Mexico</option>
+            <option value=1.62>South Africa</option>
+          </select>
+        <select class="form-select  mt-5 w-50 m-auto sel2" aria-label="Default select example">
+         <option selected>Choose The Currency To</option>
+         <option value="United States">United States</option>
+         <option value="European Union">European Union</option>
+         <option value="United Kingdom">United Kingdom</option>
+         <option value="Japan">Japan</option>
+         <option value="Canada">Canada</option>
+         <option value="Australia">Australia</option>
+         <option value="Switzerland">Switzerland</option>
+         <option value="China">China</option>
+         <option value="India">Pound</option>
+         <option value="Brazil">Brazil</option>
+         <option value="Saudi Arabia">Saudi Arabia</option>
+         <option value="United Arab Emirates">United Arab Emirates</option>
+         <option value="Russia">Russia</option>
+         <option value="Mexico">Mexico</option>
+         <option value="South Africa">South Africa</option>
+          </select>
+     <div class="container-fluid w-50">
+        <div class="form-group mt-5 ">
+            <input type="number" class="form-control inp1" placeholder="from">
+        </div>
+        <div class="form-group mt-5 ">
+            <input type="number" class="form-control Pound" disabled ="false" placeholder="Pound">
+        </div>
+     </div>
+     <button class="btn btn-dark text-light transformation">transformation</button>
+        </div>
+      </form>
+      <img src="../img/undraw/undraw_Aircraft_re_m05i.png" class="imges" alt="">
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/fontawesome-free-6.4.2-web/js/all.js"></script>
+    <script src="../Bootstrap/fontawesome-free-6.4.2-web/js/all.min.js"></script>
+    <script src="./coins.js"></script>
+</body>
+</html>

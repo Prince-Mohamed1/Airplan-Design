@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="../Bootstrap/css/all.min.css">
+ <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="../Bootstrap/fontawesome-free-6.4.2-web/css/all.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Inter:wght@600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Bricolage Grotesque', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Nunito', sans-serif;
+        }
+    body{
+        height: 100vh;
+        width: 100%;
+        background-color: #eeeeeeee;
+        background-image: url("../img/wallpaperflare.com_wallpaper (3).jpg");
+        background-size: cover;
+    }
+    .conte{
+        width: 50%;
+        height: 80%;
+        backdrop-filter: blur(10px);
+        border: 1px solid #000;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .navbar{
+        height: 60px;
+        z-index: 99999999;
+    }
+    .bt1{
+        position: absolute;
+        right: 0px;
+        bottom:80px ;
+        font-weight: bold;
+    }
+    .a1{
+        position: absolute;
+        bottom: 110px;
+    }
+    .form-group{
+        position: relative;
+    }
+    .a2{
+        position: absolute;
+        bottom: 30px;
+    }
+    .connect{
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+              <img src="../img/Sun Solar Energy Logo Design Template.  Green energy logos.png"  alt="Logo" width="50" height="44" class="d-inline-block align-text-top">
+              <a class="navbar-brand" href="#">Prince Trek</a>
+           </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 <li class="nav-item">
+                    <a class="nav-link active Home" aria-current="page" href="./proj.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Trips</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                       More
+                    </a>
+                    <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="#">News</a></li>
+                       <li><a class="dropdown-item" href="coins.html">Currency exchange</a></li>
+                       <li><hr class="dropdown-divider"></li>
+                       <li><a class="dropdown-item text-primary connect" href="./login.html">Connect with us</a></li>
+                    </ul>
+                 </li>
+              </ul>
+              <form class="d-flex" role="search">
+                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-warning text-dark" type="submit">Search</button>
+              </form>
+           </div>
+        </div>
+     </nav>
+<div class="container-fluid conte d-flex justify-content-center">
+    <form class="form-group mt-1 w-75">
+        <h1 class="text-center text-light" style="font-size: 90px;">Login</h1>
+        <input type="email" class="form-control email mt-5 w-100 form-control-color " placeholder="Email">
+        <input type="password" class="form-control password mt-5 w-100" placeholder="Password">
+        <button class="btn bt1 btn-success">Login <i class="fa-solid fa-arrow-right text-center"></i></button>
+    <a href="#" class=" a1">Forget your Password</a>
+    <a href="#" class=" a2">Sign Up</a>
+    </form>
+</div>
+    <script src="../Bootstrap/fontawesome-free-6.4.2-web/js/all.js"></script>
+    <script src="../Bootstrap/fontawesome-free-6.4.2-web/js/all.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>
